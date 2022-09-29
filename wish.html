@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			*
+			{
+				margin: 0px;
+				padding: 0px;
+			}
+			#img
+			{
+				width: 1366px;
+				height: 547px;
+			}
+
+		</style>
+		<script type="text/javascript">
+
+			function wish_me()
+			{
+				var time=new Date();
+				var current_hrs=time.getHours();
+				var a= time.toLocaleTimeString();
+				document.getElementById('tm').innerHTML=a;
+				setTimeout(wish_me,1000);
+				if(current_hrs>=6&&current_hrs<=12)
+				{
+					var gm="GOODMORNING"
+					document.getElementById('wish1').innerHTML=gm;
+					document.getElementById('wish1').style.color="orange";
+					document.getElementById("img").src="C:/Users/MEGHAA/Desktop/task/mor1.gif"
+
+				}
+				else if(current_hrs>12&&current_hrs<16)
+				{
+
+					var good_noon="GOODAFTERNOON"
+					document.getElementById('wish1').innerHTML="GOODAFTERNOON";
+					document.getElementById('wish1').style.color="red";
+					document.getElementById('img').src="C:/Users/MEGHAA/Desktop/task/goodafter.gif"
+				}
+					else if(current_hrs>16&&current_hrs<19)
+					{
+							var good_eve="GOODEVENING"
+							document.getElementById('wish1').innerHTML="GOODEVENING";
+							document.getElementById('wish1').style.color="yellow";
+							document.getElementById('img').src="C:/Users/MEGHAA/Desktop/task/tropical-sunset-sunset.gif"
+					}
+						else
+						{
+							var good_night="GOODNIGHT"
+							document.getElementById('wish1').innerHTML="GOODNIGHT";
+							document.getElementById('wish1').style.color="blue";
+							document.getElementById('img').src="C:/Users/MEGHAA/Desktop/task/GOODN1.gif"
+						}		
+
+			}
+		</script>
+	</head>
+	<body onload="wish_me()">
+		
+		<center><h1 id="tm"></h1></center>
+		<center><h1 id="wish1"></h1></center>
+		
+		<img src="" id="img">
+
+
+	</body>
+</html>

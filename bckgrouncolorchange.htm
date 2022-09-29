@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<script type="text/javascript">
+			function color_change()
+
+			{
+
+				var color=document.getElementById('clr').value
+				// alert()
+
+				if(color=="R")
+				{
+					document.getElementById("bg").style.background="red";
+					
+				}
+				else if(color=="Bl")
+				{
+					// alert()
+					document.getElementById("bg").style.background="blue";
+				}
+				else if(color=="P")
+				{
+					document.getElementById("bg").style.background="pink";
+				}
+				else if(color=="Y")
+				{
+					document.getElementById("bg").style.background="yellow";
+				}
+				else if(color=="O")
+				{
+					document.getElementById("bg").style.background="orange";
+				}
+				else
+				{
+					document.getElementById("bg").style.background="black";
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body id="bg">
+		<center>
+		<h1>Select any color to change Bachground color</h1>
+	<h3>Choose Color</h3><select id="clr" onchange="color_change()" >
+			<option id="clr1">Select color</option>
+			<option  value="R" >Red</option>
+			<option  value="Bl">Blue</option>
+			<option  value="P">Pink</option>
+			<option value="Y">Yellow</option>
+			<option  value="O">Orange</option>
+			<option  value="B">Black</option>
+
+		</select>
+	</center>
+
+	</body>
+</html>

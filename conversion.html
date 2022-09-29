@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			.text
+			{
+				width: 500px;
+				height: 300px;
+				background: cyan;
+				border: 1px solid black;
+				position: absolute;
+				top: 20px;
+			}
+			.text input
+			{
+				width: 200px;
+				height: 50px;
+				border: 2px solid black;
+				font-size: 30px;
+				background: lightblue;
+
+				
+
+
+
+			}
+			span
+			{
+				font-size: 30px;
+			}
+			#conver1
+			{
+				width: 150px;
+				height: 30px;
+				font-size: 15px;
+				position: absolute;
+				left: 200px;
+				top: 100px;
+			}
+
+		</style>
+		<script>
+			function conversion()
+			{
+				
+				var first_no=document.getElementById('from').value;
+				
+				// var cnvrt=document.getElementById('to').value;
+				var convert=document.getElementById('conver1').value;
+
+				if(convert=="")
+				{
+					alert("please select operator");
+				}
+				else
+				{
+					if(convert=="kilometer to meter")
+					{	
+						var cnvrt=first_no*1000;
+						document.getElementById('to').value=cnvrt;
+					}
+					if(convert=="meter to kilometer")
+					{
+						var cnvrt=first_no/1000;
+						document.getElementById('to').value=cnvrt;
+					}
+					if(convert=="centimeter to meter")
+					{
+						var cnvrt=first_no/100;
+						document.getElementById('to').value=cnvrt;
+					}
+					if(convert=="meter to centimeter")
+					{
+						var cnvrt=first_no*100;
+						document.getElementById('to').value=cnvrt;
+					}
+					if(convert=="kilogram to gram")
+					{
+						var cnvrt=first_no*1000;
+						document.getElementById('to').value=cnvrt;
+					}
+			
+
+				}
+
+			}
+
+
+
+		</script>
+	</head>
+	<body>
+		<center>
+     <div class="text">
+     	From
+     	<input type="text" id="from">
+     
+     	<!-- <select  onchange="conversion()">
+     		<option>select unit</option>
+     		<option>kilometer</option>
+     		<option>meter</option>
+     		<option>centimeter</option>
+     		<option>kilogram</option>
+     		<option>celsius</option>
+     		<option>fahrenheit</option>
+     		
+     	</select> -->
+     	
+     	<span>To</span>
+     	<input type="text" id="to"><br><br>
+     	<select id="conver1" onchange="conversion()">
+     		<option value="">select unit</option>
+     		<option>kilometer to meter</option>
+     		<option>meter to kilometer</option>
+     		<option>centimeter to meter</option>
+     		<option>kilogram to gram</option>
+     		
+     		
+     	</select>
+
+     </div>
+ </center>
+
+	</body>
+</html>	

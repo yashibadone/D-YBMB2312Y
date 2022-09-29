@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CALCULATOR</title>
+	<style>
+		#outrbx
+		{
+			width: 450px;
+			height: 500px;
+			background: #48C9B0;
+		}
+		#num
+		{
+			position: relative;
+			top: 30px;
+			right: 50px;
+		}
+		#num1
+		{
+			width: 350px;
+			height: 30px;
+			position: relative;
+			top: 10px;
+			left: 50px;
+			border-radius:10px;
+		}
+		#number
+		{
+			position: relative;
+			top: 50px;
+			right: 50px;
+		}
+		#num2
+		{
+			width: 350px;
+			height: 30px;
+			position: relative;
+			top: 10px;
+			left: 50px;
+			border-radius:10px;
+		}
+		#operation
+		{
+			width: 250px;
+			height: 32px;
+			position: relative;
+			top: 10px;
+			left: -50px;
+			border-radius:10px;
+		}
+		#btn
+		{
+			position: relative;
+			left: 128px;
+			bottom: 20px;
+			width: 95px;
+			height: 30px;
+			border-radius:5px;
+			background: #EC7063;
+			border-style: none;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.19);
+		}
+		#rsltbox
+
+		{
+			position: relative;
+			top: 10px;
+			right: 50px;
+		}
+		#result
+		{
+			width: 350px;
+			height: 30px;
+			position: relative;
+			top: 10px;
+			left: 50px;
+			border-radius:10px;
+		}
+
+
+		
+		
+	</style>
+	<script>
+			function calculator()
+			{
+				// alert("ok")
+				var num1=document.getElementById("num1").value;
+				var num2=document.getElementById("num2").value;
+				var operator=document.getElementById("operation").value;
+
+				num1=parseInt(num1);
+				num2=parseInt(num2);
+				if(operator=='')
+				{
+					alert("please select operator");
+				}
+				else if(operator=='add')
+				{
+					document.getElementById("result").value=num1+num2;
+				}
+				else if(operator=='min')
+				{
+					document.getElementById("result").value=num1-num2;
+				}
+				else if(operator=='multi')
+				{
+					document.getElementById("result").value=num1*num2;
+				}
+				else 
+				{
+					document.getElementById("result").value=num1/num2;
+				}
+			}
+	</script>
+</head>
+<body><center>
+	<div id="outrbx">
+		<div>
+			<h1 style="color: white; position: relative;top: 30px;">CALCULATOR</h1>
+		</div>
+		<div id="num">
+			<label style="position: relative;right:65px;"><b>NUMBER FIRST</b></label><br>
+			s<input type="number" name="" id="num1" placeholder="Enter First Number">
+		</div>
+		<div id="number">
+			<label style="position: relative;right:60px;"><b>NUMBER SECOND</b></label><br>
+			<input type="number" name="" id="num2" placeholder="Enter Second Number">
+		</div><br><br><br><br><br>
+		<div id="select">
+			<select id="operation" >
+				<option value="">Please Select Operator</option>
+				<option value="add">+</option>
+				<option value="min">-</option>
+				<option value="multi">*</option>
+				<option value="div">/</option>
+				<!-- <option value="div"><p>x<sup>2</sup></p></option> -->
+			</select>
+			
+
+			
+		</div>
+		<button id="btn" onclick="calculator()">CALCULATE</button>
+		<div id="rsltbox">
+			<label style="position: relative;right:90px;"><b>RESULT</b></label><br>
+			<input type="number" name="" id="result">
+		</div>
+	</div>
+    </center>
+
+</body>
+</html>
